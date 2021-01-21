@@ -55,6 +55,7 @@ body {
 
 .Navbar{
   margin: 10rem;
+  
 }
 .webpages {
   background: -webkit-linear-gradient(#631074 0%, #ff1004bb 100%);
@@ -104,3 +105,10 @@ section {
   opacity: 0.3; 
 }
 
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+:root {
+  --animate-duration: 900ms;
+  --animate-delay: 10s;
+}

@@ -14,7 +14,7 @@ import {
 
 import { Navbar, Nav } from 'react-bootstrap';
 import Images from '../images/photo-1544194215-541c2d3561a4.png';
-
+import {animate__animatedanimate__bounce} from 'animate.css';
 
 
 
@@ -33,9 +33,10 @@ import Multi from '../multi/multi';
 export default function NavBar() {
     return (
         <Router>
+           
 
             <Navbar expand="d-flex justify-content-start">
-                <h3 id="title">Welcome To The Many Websites</h3>
+                <h3 id="title" class="animate__animated animate__bounce">Welcome To The Many Websites</h3>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="collapse">
                     <Nav className="webpages">
@@ -49,7 +50,9 @@ export default function NavBar() {
 
             <section>
                 <div className="hero">
-                    <img src={Images} />
+                    <img
+                        src={Images}
+                    />
                     <style>
                         @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
                     </style>
