@@ -9,10 +9,12 @@ import {
     Switch,
     Route,
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
 
 
-import { Button, Form, Navbar, Nav, FormControl } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+import Images from '../images/photo-1544194215-541c2d3561a4.png';
+
 
 
 
@@ -22,50 +24,57 @@ import Puppy from '../puppy/puppy';
 import Multi from '../multi/multi';
 
 
-export default function NavBar(){
+
+
+
+
+
+
+export default function NavBar() {
     return (
         <Router>
 
-        <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link as={Link} to='/business'> Business Redevolopment Site </Nav.Link>
-              <Nav.Link as={Link} to='/hamster'> Hamster Hotel </Nav.Link>
-              <Nav.Link as={Link} to='/puppy'> Puppy Restaurant </Nav.Link>
-              <Nav.Link as={Link} to='/multi'> Multipage Website </Nav.Link>
-            </Nav>
-            <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Navbar.Collapse>
-        </Navbar>
-        <hr />
-  
-        <Switch>
-          <Route path="/business">
-              {/* <RenderList /> */}
-            <Business />
-          </Route>
-          <Route path="/hamster">
-            <Hamster />
-          </Route>
-          <Route path="/puppy">
-            <Puppy />
-          </Route>
-          <Route path="/multi">
-            <Multi />
-          </Route>
-        </Switch>
-      
-      </Router>
+            <Navbar expand="d-flex justify-content-start">
+                <h3 id="title">Websites</h3>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="collapse">
+                    <Nav className="webpages">
+                        <Nav.Link as={Link} to='/business'>Business Redevolopment Site</Nav.Link>
+                        <Nav.Link as={Link} to='/hamster'>Hamster Hotel</Nav.Link>
+                        <Nav.Link as={Link} to='/puppy'>Puppy Restaurant</Nav.Link>
+                        <Nav.Link as={Link} to='/multi'>Multipage Website</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+            <section>
+                <div className="hero">
+                    <img src={Images} />
+                    <h1 id="headline">Welcome</h1>
+                </div>
+            </section>
+
+            <div className="slider"></div>
+            <div id="root"></div>
+
+
+            <Switch>
+                <Route path="/business">
+                    <Business />
+                </Route>
+                <Route path="/hamster">
+                    <Hamster />
+                </Route>
+                <Route path="/puppy">
+                    <Puppy />
+                </Route>
+                <Route path="/multi">
+                    <Multi />
+                </Route>
+            </Switch>
+
+        </Router>
     )
 }
-// function RenderList() {
-//     return (
-//       <Business />
-    
-//     );
-//   }
+
+
