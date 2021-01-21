@@ -35,7 +35,7 @@ export default function NavBar() {
         <Router>
 
             <Navbar expand="d-flex justify-content-start">
-                <h3 id="title">Websites</h3>
+                <h3 id="title">Welcome To The Many Websites</h3>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="collapse">
                     <Nav className="webpages">
@@ -50,12 +50,14 @@ export default function NavBar() {
             <section>
                 <div className="hero">
                     <img src={Images} />
-                    <h1 id="headline">Welcome</h1>
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+                    </style>
                 </div>
             </section>
 
-            <div className="slider"></div>
-            <div id="root"></div>
+
+
 
 
             <Switch>
